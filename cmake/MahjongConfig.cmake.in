@@ -1,0 +1,58 @@
+@PACKAGE_INIT@
+if(NOT Mahjong_FIND_COMPONENTS)
+  set(Mahjong_FIND_COMPONENTS
+    calsht
+    calsht_dw
+    waits_predictor
+    score_calculator)
+endif()
+
+set(Mahjong_calsht_FOUND FALSE)
+
+if("calsht" IN_LIST Mahjong_FIND_COMPONENTS)
+  if(NOT TARGET Calsht::calsht)
+    include("${CMAKE_CURRENT_LIST_DIR}/CalshtConfig.cmake")
+  endif()
+  if(NOT TARGET Mahjong::calsht)
+    add_library(Mahjong::calsht ALIAS Calsht::calsht)
+  endif()
+  set(Mahjong_calsht_FOUND TRUE)
+endif()
+
+set(Mahjong_calsht_dw_FOUND FALSE)
+
+if("calsht_dw" IN_LIST Mahjong_FIND_COMPONENTS)
+  if(NOT TARGET CalshtDW::calsht_dw)
+    include("${CMAKE_CURRENT_LIST_DIR}/CalshtDWConfig.cmake")
+  endif()
+  if(NOT TARGET Mahjong::calsht_dw)
+    add_library(Mahjong::calsht_dw ALIAS CalshtDW::calsht_dw)
+  endif()
+  set(Mahjong_calsht_dw_FOUND TRUE)
+endif()
+
+set(Mahjong_waits_predictor_FOUND FALSE)
+
+if("waits_predictor" IN_LIST Mahjong_FIND_COMPONENTS)
+  if(NOT TARGET WaitsPredictor::waits_predictor)
+    include("${CMAKE_CURRENT_LIST_DIR}/WaitsPredictorConfig.cmake")
+  endif()
+  if(NOT TARGET Mahjong::waits_predictor)
+    add_library(Mahjong::waits_predictor ALIAS WaitsPredictor::waits_predictor)
+  endif()
+  set(Mahjong_waits_predictor_FOUND TRUE)
+endif()
+
+set(Mahjong_score_calculator_FOUND FALSE)
+
+if("score_calculator" IN_LIST Mahjong_FIND_COMPONENTS)
+  if(NOT TARGET ScoreCalculator::score_calculator)
+    include("${CMAKE_CURRENT_LIST_DIR}/ScoreCalculatorConfig.cmake")
+  endif()
+  if(NOT TARGET Mahjong::score_calculator)
+    add_library(Mahjong::score_calculator ALIAS ScoreCalculator::score_calculator)
+  endif()
+  set(Mahjong_score_calculator_FOUND TRUE)
+endif()
+
+check_required_components(Mahjong)
