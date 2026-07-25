@@ -17,7 +17,7 @@ set(COMMON_CMAKE_ARGS
 
 ExternalProject_Add(shanten-number
   GIT_REPOSITORY https://github.com/tomohxx/shanten-number.git
-  GIT_TAG v2.0.3
+  GIT_TAG master
   CMAKE_ARGS ${COMMON_CMAKE_ARGS}
   STEP_TARGETS build install
   BUILD_ALWAYS OFF
@@ -25,7 +25,7 @@ ExternalProject_Add(shanten-number
 
 ExternalProject_Add(necessary-and-unnecessary-tiles
   GIT_REPOSITORY https://github.com/tomohxx/necessary-and-unnecessary-tiles.git
-  GIT_TAG v2.0.3
+  GIT_TAG master
   CMAKE_ARGS ${COMMON_CMAKE_ARGS}
   STEP_TARGETS build install
   BUILD_ALWAYS OFF
@@ -33,7 +33,7 @@ ExternalProject_Add(necessary-and-unnecessary-tiles
 
 ExternalProject_Add(waits-predictor
   GIT_REPOSITORY https://github.com/tomohxx/waits-predictor.git
-  GIT_TAG v1.0.3
+  GIT_TAG main
   CMAKE_ARGS ${COMMON_CMAKE_ARGS}
   STEP_TARGETS build install
   BUILD_ALWAYS OFF
@@ -41,7 +41,7 @@ ExternalProject_Add(waits-predictor
 
 ExternalProject_Add(score-calculator
   GIT_REPOSITORY https://github.com/tomohxx/score-calculator.git
-  GIT_TAG v0.2.1
+  GIT_TAG main
   CMAKE_ARGS ${COMMON_CMAKE_ARGS}
   STEP_TARGETS build install
   BUILD_ALWAYS OFF
