@@ -17,7 +17,7 @@ set(COMMON_CMAKE_ARGS
 
 ExternalProject_Add(shanten-number
   GIT_REPOSITORY https://github.com/tomohxx/shanten-number.git
-  GIT_TAG master
+  GIT_TAG main
   CMAKE_ARGS ${COMMON_CMAKE_ARGS}
   STEP_TARGETS build install
   BUILD_ALWAYS OFF
@@ -25,7 +25,7 @@ ExternalProject_Add(shanten-number
 
 ExternalProject_Add(necessary-and-unnecessary-tiles
   GIT_REPOSITORY https://github.com/tomohxx/necessary-and-unnecessary-tiles.git
-  GIT_TAG master
+  GIT_TAG main
   CMAKE_ARGS ${COMMON_CMAKE_ARGS}
   STEP_TARGETS build install
   BUILD_ALWAYS OFF
